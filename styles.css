@@ -1,7 +1,12 @@
 body {
   font-family: "Outfit", sans-serif;
+  font-weight: 400;
   background-color: hsl(30, 54%, 90%);
   margin: 0;
+}
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+  all: unset;
 }
 
 h1, h2 {
@@ -114,44 +119,52 @@ li > .label {
 }
 
 .nutrition-table {
-  width: 100%;
-  text-align: left;
-}
-
-.nutrition-table {
-  border-collapse: collapse;
-
   caption {
+    color: hsl(30, 10%, 34%);
     font-size: 16px;
     font-weight: 400;
-    text-align: left;
     padding-right: 5px;
-    margin-bottom: 24px;
   }
 
   th {
     color: hsl(30, 10%, 34%);
+    font-weight: 400;
   }
 
   td {
     color: hsl(14, 45%, 36%);
   }
 
-  th, td {
+  td {
     font-weight: 600;
+  }
+
+  tr::after {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    display: block;
+  }
+  
+  tr {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    margin-block: 12px;
+  }
+
+  tbody {
+    display: block;
+    margin-top: 24px;
+    margin-left: 32px;
   }
 
   tr:not(:last-child) {
     border-bottom: 1px solid hsl(30, 18%, 87%);
-    padding-block: 100px;
-    margin-block: 100px;
+    padding-bottom: 10px;
   }
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
-
 }
 
 .attribution a {
