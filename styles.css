@@ -9,11 +9,15 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   all: unset;
 }
 
-h1, h2 {
+.section-title, .recipe-title {
   font-family: "Young Serif", serif;
 }
 
-h2 {
+.preparation-time-title {
+  font-family: "Outfit", sans-serif;
+}
+
+.section-title {
   color: hsl(14, 45%, 36%);
 }
 
@@ -143,11 +147,6 @@ li > .label {
   td {
     font-weight: 600;
   }
-
-  tr::after {
-    border-bottom: 1px solid hsl(30, 18%, 87%);
-    display: block;
-  }
   
   tr {
     display: grid;
@@ -170,6 +169,9 @@ li > .label {
 }
 
 .attribution {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: hsl(0, 0%, 100%);
   font-size: 11px;
   text-align: center;
 }
@@ -211,5 +213,10 @@ li > .label {
     td {
       padding-left: 22px;
     }
+  }
+
+  .attribution {
+    background-color: hsl(30, 54%, 90%);
+    padding-bottom: 0;
   }
 }
