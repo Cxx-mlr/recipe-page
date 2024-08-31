@@ -33,7 +33,7 @@ li > .label {
   padding-bottom: 38px;
 }
 
-.recipe-article > *:not(img) {
+.recipe-article > *:not(.recipe-image-container) {
   margin-inline: 28px;
 }
 
@@ -49,8 +49,13 @@ li > .label {
   color: hsl(24, 5%, 18%);
 }
 
+.recipe-description {
+  line-height: 1.5rem;
+}
+
 .preparation-time-section {
-  margin-block: 26px;
+  margin-top: 32px;
+  margin-bottom: 26px;
   padding: 4px 26px 8px 26px;
   border-radius: 16px;
   background-color: hsl(330, 100%, 98%);
@@ -153,12 +158,14 @@ li > .label {
   tbody {
     display: block;
     margin-top: 24px;
-    margin-left: 32px;
   }
 
-  tr:not(:last-child) {
+  .row-divider {
     border-bottom: 1px solid hsl(30, 18%, 87%);
-    padding-bottom: 10px;
+  }
+
+  tr:not(.row-divider) {
+    margin-left: 32px;
   }
 }
 
@@ -171,11 +178,15 @@ li > .label {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
+  .recipe-article > * {
+    margin-inline: 38px !important;
+  }
+
   .recipe-title {
-    margin-top: 12px;
+    margin-top: 32px;
     margin-bottom: 22px;
-    font-size: 40.3px;
+    font-size: 41px;
   }
 
   body {
@@ -192,9 +203,7 @@ li > .label {
   }
 
   .recipe-image {
-    padding: 40px 36px 28px 36px;
-    padding-top:40px;
-    box-sizing: border-box;
-    border-radius: 42px;
+    margin-top: 38px;
+    border-radius: 8px;
   }
 }
