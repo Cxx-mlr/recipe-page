@@ -206,4 +206,10 @@ li > .label {
     margin-top: 38px;
     border-radius: 8px;
   }
+
+  .nutrition-table {
+    td {
+      padding-left: 22px;
+    }
+  }
 }
